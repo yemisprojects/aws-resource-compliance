@@ -14,10 +14,10 @@ The solution consists of three services; AWS Config, Lambda, and SES. A custom c
 
 ## Deployment Steps
 
-Replace `<email_address>` with your email address before running `terraform apply` in the command below.
+Replace `<email_address>` with your email address before running in the commands below.
 ```bash
 git clone https://github.com/yemisprojects/aws-resource-compliance.git && cd aws-resource-compliance
 terraform init
-terraform plan
+terraform plan -var="default_email_id=<email_address>"
 terraform apply -var="default_email_id=<email_address>" --auto-approve 
 ```
