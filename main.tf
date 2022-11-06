@@ -2,7 +2,7 @@
 resource "aws_config_config_rule" "sqs_encryption_rule" {
 
   name             = "sqs-kms-encrypted"
-  description      = "Checks that your Amazon sqs queue has server encryption enabled"
+  description      = "Checks that your Amazon sqs queue uses Encryption with an AWS KMS Key"
   input_parameters = "{\"KmsKeyId\": \"alias/aws/sqs\"}"
   scope {
     compliance_resource_types = ["AWS::SQS::Queue"]

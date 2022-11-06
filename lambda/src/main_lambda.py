@@ -1,3 +1,8 @@
+"""
+The lambda handler is invoked a Custom Config rule when there are SQS configuration changes.
+It remediate non-compliant queues without an AWS KMS key using a given key and sends emails
+to the resource owner.
+"""
 import os
 import re
 import json
